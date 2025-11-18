@@ -1,0 +1,7 @@
+{
+  "backend": "ollama",
+  "model": "mistral",
+  "temperature": 0.2,
+  "max_tokens": 2048,
+  "context_length": 8192
+}

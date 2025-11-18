@@ -1,0 +1,22 @@
+{
+  "servers": {
+    "devops-llm": {
+      "type": "internal",
+      "tools": [
+        "devops_analyze_k8s_state",
+        "devops_review_terraform",
+        "devops_ci_pipeline_assistant",
+        "devops_incident_summary"
+      ]
+    },
+    "aws-api-mcp": {
+      "type": "external",
+      "command": "python",
+      "args": ["-m", "awslabs.aws_api_mcp_server.server"],
+      "env": {
+        "AWS_REGION": "ap-south-1",
+        "READ_OPERATIONS_ONLY": "true"
+      }
+    }
+  }
+}
